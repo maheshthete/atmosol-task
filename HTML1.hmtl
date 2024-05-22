@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css1.css">
+    <title>clients</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            width: 220px;
+            background-color: #fff;
+            height: 100vh;
+            position: fixed;
+            border-right: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: #000;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .main-content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .main-content h1 {
+            font-size: 28px;
+            margin-bottom: -57px;
+        }
+        .client-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .client-list th, .client-list td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .client-list th {
+            background-color: #f1f1f1;
+        }
+        .client-list img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .action-buttons {
+            margin-top: 22px;
+    margin-bottom: 20px;
+    float: right;
+        }
+        .action-buttons button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .action-buttons button.delete {
+            background-color: #d9534f;
+            color: #fff;
+        }
+        .action-buttons button.edit {
+            background-color: #5bc0de;
+            color: #fff;
+        }
+        .action-buttons button.add-client {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+    </style> 
+</head>
+
+<body>
+    <script>
+        function mydata(){
+            var a= document.getElementById("fname").value;
+            var b= document.getElementById("faccount").value;
+            var c= document.getElementById("femail").value;
+            var d= document.getElementById("fphoneno").value;
+    
+            if(a==""||b==""||c==""||d==""){
+                alert("please fill all data");
+                return false; 
+            }else if(b.length<10||b.length>10){
+                alert("please do not add more than 10 digits no.");
+                return false;
+            }
+        }
+    
+    </script>
+    <h1>My Clients</h1>
+    
+<div class="sidebar">
+    <h2>Accountant</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">My Clients</a>
+    <a href="#">Reports</a>
+</div>
+
+<div class="main-content">
+    <h1>Clients</h1>
+    <div class="action-buttons">
+        <button class="delete"><img src="logo4.png" alt="delete"></button>
+        <button class="edit"><img src="logo4.png" alt="edit"></button>
+        <button class="add-client"><img src="logo4.png" alt="add clients"></button>
+    </div>
+    <table class="client-list">
+        <thead>
+            <tr>
+                <th><input type="text"  id="fname" placeholder="Name" >
+                    <select>
+                        <option></option>
+                        <option>Atmosol</option>
+                        <option>DP World</option>
+                        <option>rectime Fashion</option>
+                    </select>
+                  </th>
+                <th><input type="text" id="faccount" placeholder="Acc.No.">
+                    <select>
+                        <option></option>
+                        <option>856522901276</option>
+                        <option>676522901276</option>
+                        <option>556522901276</option>
+                    </select> 
+                 </th>
+                <th> <input type="email" id="femail" placeholder="Email">
+                    <select>
+                        <option></option>
+                        <option>sam1@gmail.com</option>
+                        <option>sam11@gmail.com</option>
+                        <option>sa1m1@gmail.com</option>
+                    </select> 
+                 </th>
+                <th><input type="phone"  id="fphoneno"placeholder="Phone No." >
+                    <select>
+                        <option></option>
+                        <option>721425336</option>
+                        <option>3673828326</option>
+                        <option>1632643578538</option>
+                    </select> 
+                 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="logo1.png" alt="logo"> Atmosol</td>
+                <td>856522901276</td>
+                <td>support@atmosol.com</td>
+                <td>99766 71100</td>
+            </tr>
+            <tr>
+                <td><img src="logo2.png" alt="logo"> DP World</td>
+                <td>678922901567</td>
+                <td>dpworld@gmail.com</td>
+                <td>88766 71155</td>
+            </tr>
+            <tr>
+                <td><img src="logo3.png" alt="logo"> RecTime Fashion</td>
+                <td>906521276560</td>
+                <td>rectimefashion@gmail.com</td>
+                <td>97760 79911</td>
+            </tr>
+            <tr>
+                <td><img src="logo4.png" alt="logo"> Jainex Aamcol Ltd.</td>
+                <td>136522989615</td>
+                <td>jainexaamcol@yahoo.com</td>
+                <td>99777 70910</td>
+            </tr>
+            <tr>
+                <td><img src="logo5.png" alt="logo"> Jinaams Dress Ltd.</td>
+                <td>856522901276</td>
+                <td>support@jinaamsdress.com</td>
+                <td>98776 56109</td>
+            </tr>
+            <tr>
+                <td><img src="logo6.png" alt="logo"> B&B Packaging India Ltd.</td>
+                <td>654022901276</td>
+                <td>bbpackaging@example.com</td>
+                <td>99766 71144</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+<div class="footer">
+    Powered by LOGO+ | Copyright © 2024 FINMAN+. All rights reserved.
+</div>
+
+</body>
+</body>
+</html>
